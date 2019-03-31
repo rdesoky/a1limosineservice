@@ -27,7 +27,7 @@ caption { margin:0; padding:.5em; }
 body {
 	background-attachment:fixed;
 	background-color:#4e8bd1;
-	background-image:url(images/719_body_1.jpg);
+	background-image:url(../images/719_body_1.jpg);
 	background-position:bottom;
 	background-repeat:no-repeat;
 	color:#656565;
@@ -153,7 +153,7 @@ a:hover { color:#0d8ab3; }
 	padding:7px 13px;
 }
 .sf_navigation ul li:hover a {
-	background-image:url(images/719_nav_hover.png);
+	background-image:url(../images/719_nav_hover.png);
 }
 /*------------------------------------
 	Flyout menu
@@ -389,5 +389,5 @@ input#password { border:solid 1px #dadcdc; }
 * html .sf_navigation ul li a {
 	margin:8px 2px;
 }
-* html .sf_extra6 span {  behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",  this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",  this.src = "images/spacer.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("', '').replace('")', ''),  this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",  this.runtimeStyle.backgroundImage = "none")), this.pngSet=true));;
+* html .sf_extra6 span {  behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" && this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",  this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",  this.src = "../images/spacer.gif"):(this.origBg = this.origBg? this.origBg :this.currentStyle.backgroundImage.toString().replace('url("', '').replace('")', ''),  this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",  this.runtimeStyle.backgroundImage = "none")), this.pngSet=true));;
 }

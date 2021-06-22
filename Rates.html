@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="rates.js"></script>
+    <script src="rates.js?v2"></script>
 
     <title>Rates</title>
     <meta name="description" content="Rates" />
@@ -32,6 +32,9 @@
       body {
         margin: 0;
         padding: 0;
+      }
+      [v-cloak] {
+        display: none;
       }
     </style>
     <script
@@ -73,8 +76,8 @@
       href="./styles/WstUserAdvancedStyles.css"
     />
   </head>
-  <body id="page_982b3b7e-596a-4553-ab7d-06f4f0f4870b">
-    <div class="sf_outer_wrapper">
+  <body>
+    <div class="sf_outer_wrapper" id="app">
       <div class="sf_region1"></div>
       <div class="sf_extra1"><span></span></div>
       <div class="sf_wrapper">
@@ -205,7 +208,7 @@
                 </div>
               </div>
               <div class="sf_content">
-                <div class="LayoutContainer" style="display: block">
+                <div class="LayoutContainer" v-cloak>
                   <div>
                     <div style="display: block; overflow: hidden">
                       <div style="text-align: center">
@@ -356,8 +359,9 @@
                                     ><i
                                       ><span
                                         style="font-size: 20pt; color: #365f91"
-                                        >- $50&nbsp; per hour/ Lincoln town car/
-                                        UP TO 4 Passengers<span
+                                        >- ${{extra.townCar}}&nbsp; per hour/
+                                        Lincoln town car/ UP TO 4
+                                        Passengers<span
                                           class="apple-converted-space"
                                           >&nbsp;<o:p></o:p></span></span></i
                                   ></b>
@@ -377,7 +381,7 @@
                                             font-size: 20pt;
                                             color: #365f91;
                                           "
-                                          >- $65 Per hour&nbsp;
+                                          >- ${{extra.suv}} Per hour&nbsp;
                                           SUV&nbsp;&nbsp;&nbsp; up to 7
                                           passengers<o:p></o:p></span></i></b
                                   ></span>
@@ -397,8 +401,9 @@
                                             font-size: 20pt;
                                             color: #365f91;
                                           "
-                                          >- $95 per hour Limo Stretch up to 10
-                                          passengers<o:p></o:p></span></i></b
+                                          >- ${{extra.limo}} per hour Limo
+                                          Stretch up to 10 passengers<o:p
+                                          ></o:p></span></i></b
                                   ></span>
                                 </p>
                                 <p
@@ -519,7 +524,8 @@
                             <div style="font-weight: normal; text-align: left">
                               <b
                                 ><font style="font-size: 20px"
-                                  >- ADD $20 FOR SUV UP TO 7 PASSENGERS.<br />
+                                  >- ADD ${{extra.airportSUV}} FOR SUV UP TO 7
+                                  PASSENGERS.<br />
                                   <br /> </font
                               ></b>
                             </div>
@@ -533,8 +539,9 @@
                               >
                                 <b
                                   ><font style="font-size: 20px"
-                                    >- ADD $10 EARLY PICKUP OR LATE ARRIVAL
-                                    BETWEEN 11:00PM to 5:30AM.<br />
+                                    >- ADD ${{extra.airportEarly}} EARLY PICKUP
+                                    OR LATE ARRIVAL BETWEEN 11:00PM to
+                                    5:30AM.<br />
                                     <br /> </font
                                 ></b>
                               </div>
@@ -543,8 +550,8 @@
                               >
                                 <b
                                   ><font style="font-size: 20px"
-                                    >- ADD $5 AIRPORT PARKING WITH ARRIVAL
-                                    ONLY.<br />
+                                    >- ADD ${{extra.airportParking}} AIRPORT
+                                    PARKING WITH ARRIVAL ONLY.<br />
                                     <br /> </font
                                 ></b>
                               </div>
@@ -553,8 +560,10 @@
                               >
                                 <b
                                   ><font style="font-size: 20px"
-                                    >- EXTRA STOP SAME CITY $15 , EXTRA STOP
-                                    DIFFERENT CITY &nbsp;$25.<br />
+                                    >- EXTRA STOP SAME CITY
+                                    ${{extra.stopSameCity}} , EXTRA STOP
+                                    DIFFERENT CITY
+                                    &nbsp;${{extra.stopOtherCity}}.<br />
                                     <br /> </font
                                 ></b>
                               </div>
@@ -563,7 +572,7 @@
                               >
                                 <b
                                   ><font style="font-size: 20px"
-                                    >- $20.00 GATE MEET.<br />
+                                    >- ${{extra.gateMeet}} GATE MEET.<br />
                                     <br /> </font
                                 ></b>
                               </div>
@@ -572,7 +581,8 @@
                               >
                                 <b
                                   ><font style="font-size: 20px"
-                                    >- ADD 15-20 % DRIVER GRATUITY.<br />
+                                    >- ADD {{extra.gratuity}} % DRIVER
+                                    GRATUITY.<br />
                                     <br /> </font
                                 ></b>
                               </div>
@@ -664,7 +674,7 @@
                             </b></font
                           >
                         </div>
-                        <div id="app">
+                        <div>
                           <table
                             border
                             style="
